@@ -43,6 +43,9 @@ def determine_winner(player_move, comp_move):
 
 def print_scoreboard(player_wins, comp_wins, ties):
     """Prints out the scoreboard neatly.  Returns nothing."""
+    if player_wins:
+        print("player wins")
+    else: print("comp_wins")
     print("Player Score: %s" % player_wins)
     print("Computer Score: %s" % comp_wins)
     print("Ties: %s" % ties)
@@ -60,3 +63,4 @@ def get_move_name(short_move):
 
 
 # Write your code below - make RPS happen using the functions above!
+print(determine_winner(get_player_move(), get_computer_move()))
